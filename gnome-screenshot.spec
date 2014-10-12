@@ -1,16 +1,16 @@
 Summary:	Screenshot utility
 Name:		gnome-screenshot
-Version:	3.12.0
+Version:	3.14.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-screenshot/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	d3467ad5bf6a84715a88f5bbc7ef596a
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-screenshot/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	d0476a3c765625f4fbe193678ae23ecd
 URL:		http://live.gnome.org/GnomeUtils
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+3-devel >= 3.12.0
+BuildRequires:	gtk+3-devel >= 3.14.0
 BuildRequires:	intltool
 BuildRequires:	libcanberra-gtk3-devel
 BuildRequires:	pkg-config
@@ -57,7 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-screenshot
+%{_datadir}/dbus-1/services/org.gnome.Screenshot.service
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_desktopdir}/gnome-screenshot.desktop
+%{_desktopdir}/org.gnome.Screenshot.desktop
 %{_mandir}/man1/gnome-screenshot.1*
 
